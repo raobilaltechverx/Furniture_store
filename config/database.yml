@@ -1,0 +1,7 @@
+development:
+    adapter: postgresql
+    encoding: utf8
+    database: furniture_store
+    username: postgres
+    password: postgres
+    host: localhost

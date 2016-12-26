@@ -1,0 +1,94 @@
+<div class="banner">
+			<!-- banner Slider starts Here -->
+					<script src="/assets/responsiveslides.min.js"></script>
+					 <script>
+						// You can also use "$(window).load(function() {"
+						$(function () {
+						  // Slideshow 4
+						  $("#slider3").responsiveSlides({
+							auto: true,
+							pager: true,
+							nav: true,
+							speed: 500,
+							namespace: "callbacks",
+							before: function () {
+							  $('.events').append("<li>before event fired.</li>");
+							},
+							after: function () {
+							  $('.events').append("<li>after event fired.</li>");
+							}
+						  });
+					
+						});
+					  </script>
+					<!--//End-slider-script -->
+					<div  id="top" class="callbacks_container">
+						<ul class="rslides" id="slider3">
+							<li>
+								<div class="banner-bg">
+									<div class="container">
+										<div class="banner-info">
+											<h2>PRODUCT NAME 1<span>ANOTHER CAPTION</span></h2>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Nam dictum lectus sit amet varius pulvinar.
+											</p>
+											<a href="#">SHOP Button</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="banner-bg banner-img2">
+									<div class="container">
+										<div class="banner-info">
+											<h2>PRODUCT NAME 2<span>ANOTHER CAPTION</span></h2>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Nam dictum lectus sit amet varius pulvinar.
+											</p>
+											<a href="#">SHOP Button</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="banner-bg banner-img">
+									<div class="container">
+										<div class="banner-info">
+											<h2>PRODUCT NAME 3<span>ANOTHER CAPTION</span></h2>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Nam dictum lectus sit amet varius pulvinar.
+											</p>
+											<a href="#">SHOP Button</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="banner-bg">
+									<div class="container">
+										<div class="banner-info">
+											<h2>PRODUCT NAME 4<span>ANOTHER CAPTION</span></h2>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Nam dictum lectus sit amet varius pulvinar.
+											</p>
+											<a href="#">SHOP Button</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="banner-bg banner-img2">
+									<div class="container">
+										<div class="banner-info">
+											<h2>PRODUCT NAME 5<span>ANOTHER CAPTION</span></h2>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Nam dictum lectus sit amet varius pulvinar.
+											</p>
+											<a href="#">SHOP Button</a>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+	</div>

@@ -1,0 +1,74 @@
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header"> All Products</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+    <div class="col-lg-12"><%= link_to 'New Product', new_admin_product_path %></div>
+    
+</div >
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div  id="admin_products">
+                    <%=render :partial => 'all_products'%>
+                    <!-- /.table-responsive -->
+                </div> 
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Admin Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_products.each do |admin_product| %>
+      <tr>
+        <td><%= link_to 'Show', admin_product %></td>
+        <td><%= link_to 'Edit', edit_admin_product_path(admin_product) %></td>
+        <td><%= link_to 'Destroy', admin_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_admin_product_path %>
+ -->

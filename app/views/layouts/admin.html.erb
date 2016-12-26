@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 <title>Admin Furniture Store</title>
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="description" content="">
+	  <meta name="author" content="">
+
+	    <%= javascript_include_tag :application %>
+
+	  <%#= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track' => true %>
+	  <%#= javascript_include_tag 'select2.min' %>
+	  <%#= csrf_meta_tags %>
+	</head>
+	<%= render :partial => "/adminshared/head" %>
+	<body>
+	<%= render :partial => "/adminshared/header" %>
+		<div id="wrapper">
+			<%= render :partial => '/admin/navbar' %>
+			<div id="page-wrapper">
+			<% flash.each do |key, value| %>
+		        <div class="alert alert-<%= key %>"><%= value %></div>
+		    <% end %>
+				<%= yield %>
+			</div>
+			<%#= javascript_include_tag 'all_admin' %>
+		</div>
+	<!-- 	<script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true,
+                pageLength: 50     
+        });
+    }); 
+</script> -->
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="/assets/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/assets/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="/assets/plugins/morris/raphael.min.js"></script>
+    <script src="/assets/plugins/morris/morris.min.js"></script>
+    <script src="/assets/plugins/morris/morris-data.js"></script>
+
+	</body>
+</html>

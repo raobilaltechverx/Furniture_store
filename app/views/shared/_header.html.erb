@@ -1,0 +1,73 @@
+<div class="header">
+		<!-- container -->
+		<div class="container">
+			<!-- header-top -->
+			<div class="header-top">
+				<div class="header-logo">
+					<a href="index.html"><img src="/assets/logo.png" alt="" /></a>
+				</div>
+				<div class="header-right">
+					<ul>
+						<li class="phone">+123 456 78 987</li>
+						<li class="mail"><a href="mailto:example@mail.com">email@domain.com</a></li>
+						<li class="checkout">
+							<a href="add-to-cart.html">
+								<span class="cart">$ 99.54</span>
+								<span class="check">Checkout</span>
+							</a>
+							<div class="shopping">
+								<h5>Your Shopping Cart is empty.</h5>
+								<p>Fill it with coolest furniture ever!</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<!-- //header-top -->
+			<div class="top-nav">
+				<span class="menu"><img src="/assets/menu.png" alt=""></span>
+				<ul class="nav">
+					<li class="dropdown1"><a href="index.html">HOME</a></li>
+
+					<li><a href="about.html">ABOUT</a></li>
+					<li><a href="products.html">PRODUCTS</a></li>
+					<li><a href="single.html">SINGLE</a></li>
+
+					<li class="dropdown1"><a href="#">CHAIR</a>
+						<ul class="dropdown2">
+							<li><a href="#">ROCKING CHAIR</a></li>
+							<li><a href="#">WINDSOR CHAIR</a></li>
+							<li><a href="#">WINGBACK CHAIR</a></li>
+						</ul>
+					</li>     
+
+					<li class="dropdown1"><a href="#">BED</a>
+						<ul class="dropdown2">
+							<li><a href="#">BUNK BED</a></li>
+							<li><a href="#">CANOPY BED</a></li>
+							<li><a href="#">FOUR POSTER BED</a></li>
+						</ul>
+					</li>              
+
+					<li><a href="#">BEAN BAG</a>
+					<li><a href="#">MATTRESS</a>
+
+				</ul>
+			</div>
+			<div class="search">
+				<form>
+					<input type="text" value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}" required="">
+				</form>
+			</div>
+			<div class="clearfix"> </div>
+			<!-- script-for-menu -->
+		 <script>
+				$("span.menu").click(function(){
+					$(" ul.nav").slideToggle("slow" , function(){
+					});
+				});
+		 </script>
+		</div>
+		<!-- //container -->
+	</div>
