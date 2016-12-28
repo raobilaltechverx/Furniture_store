@@ -24,16 +24,16 @@
 								<img class="etalage_source_image" src="/assets/d3.jpg">
 							</li>
 						    <li class="etalage_thumb thumb_4 etalage_thumb_active" style="display: list-item; opacity: 1; background-image: none;">
-								<img class="etalage_thumb_image" src="/assets/d4.jpg" style="display: inline; width: 300px; height: 400px; opacity: 1;">
-								<img class="etalage_source_image" src="/assets/d4.jpg">
+								<img class="etalage_thumb_image" src="<%= @product.avatar.url(:original)%>" style="display: inline; width: 300px; height: 400px; opacity: 1;">
+								<img class="etalage_source_image" src="<%= @product.avatar.url(:original)%>">
 							</li>
 						 <div class="clearfix"></div>		
 					</div>
 					<div class="single-left-right">
 						<div class="single-left-info">
-							<h3>PRODUCT NAME HERE</h3>
+							<h3><%= @product.name %></h3>
 							
-							<p><span style="color:#000;">PRICE:</span> $20</p>
+							<p><span style="color:#000;">PRICE:</span>$<%= @product.price %></p>
 
 						</div>
 						<div class="select-size">
@@ -75,12 +75,7 @@
 					<div class="clearfix"> </div>
 					<div class="product-details">
 						<h3>PRODUCT DETAILS</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a est at leo dictum 
-							pharetra vel sit amet tellus. Vivamus vitae enim sit amet orci euismod consequat. 
-							Nulla porttitor vitae arcu ut porttitor. Pellentesque auctor enim eros, et malesuada 
-							ipsum suscipit quis. Aliquam sed ex risus. Etiam hendrerit velit luctus facilisis 
-							mollis. Integer auctor consequat est. Integer viverra fringilla finibus. Nunc id 
-							dignissim enim. 
+						<p><%= @product.description %>
 						</p>
 					</div>
 					<div class="related">
