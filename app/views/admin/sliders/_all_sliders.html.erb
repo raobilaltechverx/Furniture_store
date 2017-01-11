@@ -1,0 +1,43 @@
+<div class="dataTable_wrapper">
+    <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-vendors">
+        <thead>
+            <tr>
+            <th style="display: none;"></th>
+            
+                <th><%= t 'admin.text'%></th>
+                <th><%= t 'admin.Image'%></th>
+                <th><%= t 'admin.tool'%></th>
+                </tr>
+        </thead>
+        <tbody>
+
+        <% @admin_sliders.each do |slide| %>
+
+            <tr class="odd gradeX">
+            <td style="display: none;"></td>
+                <td><%= slide.text %></td>
+                <td><%= image_tag slide.avatar.url(:thumbnail) %></td>
+                <td>
+                   <span>
+                     <%= link_to '', edit_admin_slider_path(slide),class: "edit fa fa-edit icon_link with-tip no-text", title: "edit" %> 
+                      </span>
+                    <span>
+                        <%= link_to '',  admin_slider_path(slide),  method: :delete, data: { confirm: 'Are you sure?' } ,class: "fa fa-trash icon_link with-tip no-text"%>
+                     </span>
+                </td> 
+            </tr> 
+                <%end%>                                                                      
+        </tbody>
+    </table>
+</div>
+<!-- /.table-responsive -->
+<script>
+    $(document).ready(function() {
+        $('#dataTables-vendors').DataTable({
+                responsive: true,
+                pageLength: 50,
+                autoWidth: false
+
+        });
+    });
+</script>
