@@ -1,13 +1,26 @@
 Rails.application.routes.draw do
+  devise_for :users
   namespace :admin do
+    resources :cms_pages
+    resources :blogs
     resources :products
-    resources :categories
+    resources :sliders
+    resources :categories do
+      collection do
+        get 'create_sub_category'
+      end
   end
-  root 'home#index'
+
+  
+  end
+    root 'home#index'
 
   resources :products
-  resources :categories
-  resources :admin 
+  resources :admin
+   resources :cms_pages
+   resources :contacts
+   resources :blogs
+   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

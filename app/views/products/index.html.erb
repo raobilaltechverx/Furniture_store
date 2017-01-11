@@ -6,43 +6,12 @@
 					<h3>PRODUCTS</h3>
 			</div>
 				<div class="fashion-section">
-				<div class="fashion-grid1">
-					<% @admin_products.each do |product| %>
-						 <div class="col-md-3 fashion-grid">
-							 <a href="<%=product_path(product)%>"><p></p><%= image_tag product.avatar.url(:normal) %>
-								 <div class="product">
-									 <h3><%= product.name%></h3>
-									 <p><span></span> <%= product.price %>&euro;</p>								 </div>
-							 </a>
-							<!--  <div class="fashion-view"><span></span>
-										<div class="clearfix"></div>
-									 <h4><a href="single.html">Quick View</a></h4>
-							 </div> -->
-						 </div>
-						 <% end %>
-						 <div class="clearfix"></div>
+				<div class="fashion-grid1" id = "productid">
+					<%= render :partial => "/products/all_products" %>
 					</div>
-				
-					
 				</div>
-			</div>
-			<div class="col-md-3 side-bar">
-				<div class="categories">
-					<h3>CATEGORIES</h3>
-						<ul>
-							<li><a href="#">Chair</a></li>
-							<li><a href="#">Bed</a></li>
-							<li><a href="#">Bean Bag</a></li>
-							<li><a href="#">Mattress</a></li>
-							<li><a href="#">Another Product</a></li>
-							<li><a href="#">Product Name</a></li>
-							<li><a href="#">Product 2</a></li>
-							<li><a href="#">Product 3</a></li>
-							<li><a href="#">Product 4</a></li>
-						</ul>
-				</div>
-			</div>
- 
+			</div>	
+			<%= render :partial => "/products/product_categories" %>
 			<div class="clearfix"> </div>
 		</div>
 		<!-- //container -->

@@ -25,6 +25,10 @@
                                <%=f.label :description%>
                                 <%=f.text_field :description ,class: 'form-control', placeholder: 'deccribe' , required: 'true'%>
                             </div>
+                               <div class="form-group">
+                              <%= f.label :categories %>
+                                <%= f.select :category_ids, options_from_collection_for_select(Admin::Category.all, :id,:name,f.object.category_ids),{}, :multiple => true ,:class=> 'select form-control',:id => 'admin_categories' %>
+                            </div>
                               <div class="form-group">
                                <%=f.label :Image%>
                                 <%=f.file_field :avatar ,class: 'form-control'%>

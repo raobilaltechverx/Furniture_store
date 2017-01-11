@@ -25,7 +25,6 @@ class Admin::CategoriesController < AdminController
   # POST /admin/categories.json
   def create
     @admin_category = Admin::Category.new(admin_category_params)
-
     respond_to do |format|
       if @admin_category.save
         format.html { redirect_to admin_categories_path, notice: 'Category was successfully created.' }
@@ -59,6 +58,11 @@ class Admin::CategoriesController < AdminController
     redirect_to admin_category_path
   end
 
+
+  def create_sub_category
+  end 
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_category
@@ -72,3 +76,4 @@ class Admin::CategoriesController < AdminController
 
 
 end
+

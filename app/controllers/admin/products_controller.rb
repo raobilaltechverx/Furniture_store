@@ -4,7 +4,8 @@ class Admin::ProductsController < AdminController
   # GET /admin/products
   # GET /admin/products.json
   def index
-    @admin_products = Admin::Product.all
+  # Showing the Category products
+      @admin_products = Admin::Product.all
   end
 
   # GET /admin/products/1
@@ -66,6 +67,6 @@ class Admin::ProductsController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_product_params
-      params.require(:admin_product).permit(:name, :price, :discounted_pric, :description, :avatar)
+      params.require(:admin_product).permit(:name, :price, :discounted_pric, :description, :avatar, category_ids: [])
     end
 end

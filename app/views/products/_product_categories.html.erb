@@ -1,0 +1,13 @@
+
+<div class="col-md-3 side-bar">
+				<div class="categories">
+				<h3>CATEGORIES</h3>
+				<% @admin_categories.each do |category| %>
+				<%#= render 'selected_product_category'%>
+						<ul>
+							<li><%= link_to category.name, products_path(:category_id => category.id), :remote => true %>
+</li>
+						</ul>
+						<%end%>	
+				</div>			
+			</div>

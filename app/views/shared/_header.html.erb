@@ -28,18 +28,20 @@
 			<div class="top-nav">
 				<span class="menu"><img src="/assets/menu.png" alt=""></span>
 				<ul class="nav">
-					<li class="dropdown1"><a href="index.html">HOME</a></li>
+					<li class="dropdown1"><a href="/products">HOME</a></li>
 
-					<li><a href="about.html">ABOUT</a></li>
-					<li><a href="products.html">PRODUCTS</a></li>
+					<!-- <li><a href="about.html">ABOUT</a></li> -->
+					<li><a href="/products">PRODUCTS</a></li>
 					<li><a href="single.html">SINGLE</a></li>
 
-					<li class="dropdown1"><a href="#">CHAIR</a>
+					<li class="dropdown1"><a href="#">More</a>
+					
 						<ul class="dropdown2">
-							<li><a href="#">ROCKING CHAIR</a></li>
-							<li><a href="#">WINDSOR CHAIR</a></li>
-							<li><a href="#">WINGBACK CHAIR</a></li>
+						<%@cms_pages.each do |page|%>
+							<li><a href="<%=cms_page_path(page)%>"><%= page.title%></a></li>
+							<%end%>
 						</ul>
+					
 					</li>     
 
 					<li class="dropdown1"><a href="#">BED</a>
@@ -51,7 +53,7 @@
 					</li>              
 
 					<li><a href="#">BEAN BAG</a>
-					<li><a href="#">MATTRESS</a>
+					<li><a href="/contacts/new">Contact us </a>
 
 				</ul>
 			</div>
