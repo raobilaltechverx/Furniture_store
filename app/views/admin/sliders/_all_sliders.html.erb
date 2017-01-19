@@ -4,30 +4,29 @@
             <tr>
             <th style="display: none;"></th>
             
-                <th><%= t 'admin.title'%></th>
-                <th><%= t 'admin.description'%></th>
+                <th><%= t 'admin.text'%></th>
                 <th><%= t 'admin.Image'%></th>
-                  <th><%= t 'admin.tool'%></th>
+                <th><%= t 'admin.tool'%></th>
                 </tr>
         </thead>
         <tbody>
-        
-   <% @cms_pages.each do |page| %>
+
+        <% @admin_sliders.each do |slide| %>
+
             <tr class="odd gradeX">
             <td style="display: none;"></td>
-                <td><%= page.title %></td>
-                <td><%= page.description %></td>
-                <td><%= image_tag page.avatar.url(:thumbnail) %></td>
+                <td><%= slide.text %></td>
+                <td><%= image_tag slide.avatar.url(:thumbnail) %></td>
                 <td>
                    <span>
-                     <%= link_to '', edit_admin_cms_page_path(page),class: "edit fa fa-edit icon_link with-tip no-text", title: "edit" %> 
+                     <%= link_to '', edit_admin_slider_path(slide),class: "edit fa fa-edit icon_link with-tip no-text", title: "edit" %> 
                       </span>
-                    <span>e
-                        <%= link_to '',  admin_cms_page_path(page),  method: :delete, data: { confirm: 'Are you sure?' } ,class: "fa fa-trash icon_link with-tip no-text"%>
+                    <span>
+                        <%= link_to '',  admin_slider_path(slide),  method: :delete, data: { confirm: 'Are you sure?' } ,class: "fa fa-trash icon_link with-tip no-text"%>
                      </span>
                 </td> 
             </tr> 
-                <%end%>                                                                     
+                <%end%>                                                                      
         </tbody>
     </table>
 </div>
