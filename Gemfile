@@ -12,6 +12,7 @@ gem 'authority'
 gem 'rolify'
 gem 'ckeditor'
 gem 'acts_as_tree'
+gem 'rails_12factor', group: :production
 # USING POSTGRESQL DATABASE
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
