@@ -44,7 +44,6 @@ GEM
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap_form (2.5.3)
     builder (3.2.2)
     byebug (9.0.6)
     ckeditor (4.2.2)
@@ -178,7 +177,6 @@ PLATFORMS
 DEPENDENCIES
   acts_as_tree
   authority
-  bootstrap_form
   byebug
   ckeditor
   coffee-rails (~> 4.1.0)

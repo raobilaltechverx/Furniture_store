@@ -11,15 +11,18 @@ Rails.application.routes.draw do
       end
   end
 
-  
   end
     root 'home#index'
-
   resources :products
   resources :admin
    resources :cms_pages
    resources :contacts
    resources :blogs
+   resources :carts do
+  member do
+    get 'cart_script'
+   end
+ end
    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,5 +1,4 @@
-
-	<!-- header -->
+<!-- header -->
 	<!-- //header -->
 	<!-- single -->
 	<div class="single">
@@ -38,8 +37,9 @@
 						</div>
 						<div class="select-size">
 							
-							<div class="buy-now">
-								<a href="#">BYE NOW</a>
+							<div class="buy-now" id= "cartid">
+								<!-- <a href="#"><%# @product.id%></a> -->
+								<%= render '/carts/product_cart' %>
 							</div>
 							<div class="wishlist">
 								<!-- pop-up-box -->
