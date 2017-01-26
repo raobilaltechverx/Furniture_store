@@ -5,3 +5,13 @@ development:
     username: postgres
     password: postgres
     host: localhost
+
+test: &test
+    adapter: postgresql
+    encoding: utf8
+    database: furniture_store_test
+    username: postgres
+    password: postgres
+    host: localhost
+cucumber:
+  <<: *test

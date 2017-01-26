@@ -39,7 +39,7 @@ end
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :domain               => "gmail.com",
-      :authentication => :login,
+      #:authentication => :login,
       :user_name            => "shoaib@gems.techverx.com",
       :password             => "techverx123",
       :authentication       => :plain,
