@@ -15,10 +15,12 @@ class Admin::CategoriesController < AdminController
   # GET /admin/categories/new
   def new
     @admin_category = Admin::Category.new
+    @categories = Admin::Category.all
   end
 
   # GET /admin/categories/1/edit
   def edit
+    @categories = Admin::Category.where.not(id: @admin_category.id)
   end
 
   # POST /admin/categories
@@ -51,17 +53,10 @@ class Admin::CategoriesController < AdminController
   # DELETE /admin/categories/1
   # DELETE /admin/categories/1.json
   def destroy
-    byebug
     @admin_category = Admin::Category.find(params[:id])
     @admin_category.destroy
-
-    redirect_to admin_category_path
+    redirect_to admin_categories_path
   end
-
-
-  def create_sub_category
-  end 
-
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -71,7 +66,7 @@ class Admin::CategoriesController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_category_params
-      params.require(:admin_category).permit(:name, :image, :text)
+      params.require(:admin_category).permit(:name, :image, :text,:parent_id)
     end
 
 

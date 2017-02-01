@@ -18,6 +18,12 @@
                                 <%=f.file_field :image ,class: 'form-control'%>
                             </div>
                             <br>
+                             <div class="form-group">
+                              <%= f.label :sub_categories %>
+                                <%= f.select :parent_id, options_from_collection_for_select(@categories,:id,:name,f.object.parent_id),{},:class=> 'select form-control',:id => 'admin_categories' %>
+                            </div>
+
+
                             <div><p><%= f.submit 'Submit', class: "btn btn-default" %>
                             
                             <button type="reset" class="btn btn-default">Reset Button</button></p></div>

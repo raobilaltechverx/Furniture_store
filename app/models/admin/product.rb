@@ -4,4 +4,10 @@ has_attached_file :avatar, styles: {large: "458x606",normal: "253x337#",thumbnai
 validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 accepts_nested_attributes_for :categories
 has_many :line_items
+
+
+
+def avatar_url
+        avatar.url(:large)
+    end
 end

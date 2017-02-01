@@ -8,4 +8,12 @@ def image_url
         image.url(:large)
     end
 
+ def has_child
+ 	if self.children.present?
+		return true
+	else
+		return false
+	end 	
+ end
+
 end
