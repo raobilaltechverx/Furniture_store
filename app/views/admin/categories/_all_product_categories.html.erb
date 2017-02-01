@@ -5,6 +5,7 @@
             <th style="display: none;"></th>
             
                  <th><%= t 'admin.name'%></th>
+                 <th><%= t 'admin.image'%></th>
                   <th><%= t 'admin.tool'%></th>
                 </tr>
         </thead>
@@ -15,6 +16,8 @@
             <tr class="odd gradeX">
             <td style="display: none;"></td>
                 <td><%= category.name %></td>
+                <td><%= image_tag category.image.url(:thumbnail) %></td>
+
                 <td>
                    <span>
                      <%= link_to '',  edit_admin_category_path(category),class: "edit fa fa-edit icon_link with-tip no-text", title: "edit" %> 

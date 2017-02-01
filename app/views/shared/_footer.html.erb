@@ -3,16 +3,14 @@
 		<div class="container">
 			<div class="col-md-3 stores-grid">
 				<div class="stores">
-					<h3>Our Stores</h3>
+					<h3>TECHVERX HOUSE</h3>
 					<ul>
-							<li>Feel free to visit our stores.</li>
-							<li>1234 South Grand Avenue </li>
-							<li>Los Angeles, CA 00000 </li>
-							<li>(123) 456-7890</li>
+							<li>335 R, Main Boulevard </li>
+							<li>Johar Town, Phase II </li>
+							<li>Lahore, Pakistan </li>
+							<li>92 42 35956398</li>
 						<span>
-							<li class="drive">123 Fairview Drive </li>
-							<li>Area Name, VA 12345</li> 
-							<li>(123) 456-7890</li>
+							<li></li>
 						</span>
 					</ul>
 				</div>
@@ -43,7 +41,7 @@
 			<div class="col-md-3 support">
 				<h3>Support</h3>
 				<div class="support-grids">
-					<div class="support-left">
+					<div class="support-left support-right">
 						<ul>
 							<li><a href="#">Terms & Conditions</a></li>
 							<li><a href="#">FAQ</a></li>
@@ -74,11 +72,11 @@
 			</div>
 			<div class="col-md-3 contact">
 				<h3>Contact us</h3>
-				<form>
-					<input type="text" value="email address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'email address';}" required="">
-					<textarea value="message:" onfocus="if(this.value == 'message') this.value='';" onblur="if(this.value == '') this.value='message';">message</textarea>
+				<%= form_for (@contact) do |f|  %>
+					 <%=f.email_field :email ,class: 'form-control', placeholder: 'Email Address' , required: 'true'%>
+					  <%=f.text_area :description ,class: 'form-control',rows: 5, placeholder: 'Please enter your message' , required: 'true'%>
 					<input type="submit" value="Send MESSAGE">
-				</form>
+				<%end%>
 			</div>
 			<div class="clearfix"> </div>
 			<div class="copyright">

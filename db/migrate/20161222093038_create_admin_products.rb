@@ -7,6 +7,7 @@ class CreateAdminProducts < ActiveRecord::Migration
     	t.string :description
       t.timestamps null: false
       t.attachment :avatar
+      t.boolean :feature_pro
     end
   end
 

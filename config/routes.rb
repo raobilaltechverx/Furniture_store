@@ -18,6 +18,13 @@ Rails.application.routes.draw do
    resources :cms_pages
    resources :contacts
    resources :blogs
+   resources :api do
+   end
+   namespace :api do
+    namespace :v1 do
+    resources :categories, :defaults => { :format => :json }
+  end
+   end
    resources :carts do
   member do
     get 'cart_script'

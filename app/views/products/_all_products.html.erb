@@ -1,5 +1,5 @@
               <% @admin_products.each do |product| %>
-						 <div class="col-md-3 fashion-grid oo" >
+						 <div class="col-md-3 fashion-grid fashion-grid1 oo" >
 							 <a id ="img123" href="<%=product_path(product)%>"><p></p><%= image_tag product.avatar.url(:normal) %>
 								 <div class="product" id = <%= product.name%>>
 									 <h3><%= product.name%></h3>

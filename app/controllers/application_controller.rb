@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
 
   def cms_pages
   	@cms_pages = Admin::CmsPage.all
+  	@contact = Contact.new
+  	
   end
 
 end

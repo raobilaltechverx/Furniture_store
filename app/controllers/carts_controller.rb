@@ -1,6 +1,5 @@
 class CartsController < ApplicationController
 def cart_script
-	byebug
 	@product = Admin::Product.find(params[:id])
 
 	@current_order = Order.create

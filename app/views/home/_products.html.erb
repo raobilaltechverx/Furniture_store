@@ -12,18 +12,19 @@
 							<a href="<%=product_path(product)%>"><%= image_tag product.avatar.url(:normal) %></a>
 							<div class="products-grid-info">
 								<h3><%= product.name %></h3>
-								<h4>Top Item</h4>
+								<h4> </h4>
 								<p><%#= truncate(product.description,length: 50) %> </p>
 								<div class="price">
 									<p>$ <%= product.price %></p>
 								</div>
+								<div> </div>
 								<div class="like">
 									<a href="#"><img src="/assets/like.png" alt="" /></a>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
 							<div class="plus">
-								<a href="single.html"><img src="/assets/plus.png" alt="" /></a>
+								<!-- <a href="single.html"><img src="/assets/plus.png" alt="" /></a> -->
 							</div>
 						</div>
 					</div>
