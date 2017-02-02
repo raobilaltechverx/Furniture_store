@@ -19,4 +19,10 @@ def show
 	 render :json => {:status => :ok, :products => @products.as_json(:only => [:id,:name,:price], :methods => [:avatar_url])  }
 	end
 	end
+
+	def product
+	@category = Admin::Category.find(params[:id])
+	@products = @category.products
+    render :json => {:status => :ok, :products => @products.as_json(:only => [:id,:name,:price], :methods => [:avatar_url])  }
+	end
 end

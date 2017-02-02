@@ -22,7 +22,11 @@ Rails.application.routes.draw do
    end
    namespace :api do
     namespace :v1 do
-    resources :categories, :defaults => { :format => :json }
+    resources :categories, :defaults => { :format => :json } do
+     member do
+      get 'product'
+    end
+  end
   end
    end
    resources :carts do
