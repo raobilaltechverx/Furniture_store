@@ -12,7 +12,7 @@ def show
 	 @category = Admin::Category.find(params[:id])
 	 if  @category.children.present?
 	  @categories =  @category.children
-	  render :json => {:status => :ok, :categories => @categories.as_json(:only => [:id,:name], :methods => [:image_url])  }
+	  render :json => {:status => :ok, :categories => @categories.as_json(:only => [:id,:name], :methods => [:image_url,:has_child])  }
 	 else
 
 		@products =  @category.products
